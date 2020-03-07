@@ -12,6 +12,7 @@ push:
 install:
 	sudo install -m 644 -o root -g root lib/systemd/system/raspotify-docker.service /lib/systemd/system/raspotify-docker.service
 	sudo install -m 644 -o root -g root etc/default/raspotify-docker /etc/default/raspotify-docker
+	sudo systemctl daemon-reload
 	sudo systemctl enable raspotify-docker
 	sudo systemctl start raspotify-docker
 

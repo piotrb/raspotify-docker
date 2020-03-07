@@ -20,10 +20,7 @@ RUN apt-get update \
 
 ENV DEVICE_NAME "raspotify (Docker)"
 ENV BITRATE 160
-ENV CACHE_ARGS "--disable-audio-cache"
-ENV VOLUME_ARGS "--enable-volume-normalisation --linear-volume --initial-volume=100"
-ENV BACKEND_ARGS "--backend alsa"
 
 USER raspotify
 
-CMD /usr/bin/librespot --name ${DEVICE_NAME} $BACKEND_ARGS --bitrate ${BITRATE} $CACHE_ARGS $VOLUME_ARGS $OPTIONS
+CMD ["/usr/bin/librespot", "--name", "${DEVICE_NAME}", "--backend", "alsa", "--bitrate", "${BITRATE}", "--disable-audio-cache", "--enable-volume-normalisation", "--linear-volume", "--initial-volume=100"]
