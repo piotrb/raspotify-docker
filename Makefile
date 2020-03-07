@@ -7,7 +7,8 @@ push:
 	docker push piotrb/raspotify-docker:armhf-buster
 
 install:
-
+	sudo install -m 644 -o root -g root raspotify-docker.service /lib/systemd/system/
+	sudo systemctl enable raspotify-docker
 
 run:
 	docker run \
