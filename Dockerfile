@@ -24,4 +24,6 @@ ENV CACHE_ARGS "--disable-audio-cache"
 ENV VOLUME_ARGS "--enable-volume-normalisation --linear-volume --initial-volume=100"
 ENV BACKEND_ARGS "--backend alsa"
 
+USER raspotify
+
 CMD /usr/bin/librespot --name ${DEVICE_NAME} $BACKEND_ARGS --bitrate ${BITRATE} $CACHE_ARGS $VOLUME_ARGS $OPTIONS

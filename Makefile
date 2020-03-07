@@ -1,9 +1,9 @@
 
 build:
 	docker build . -t raspotify-docker:armhf-buster
+	docker tag raspotify-docker:armhf-buster piotrb/raspotify-docker:armhf-buster
 
 push:
-	docker tag raspotify-docker:armhf-buster piotrb/raspotify-docker:armhf-buster
 	docker push piotrb/raspotify-docker:armhf-buster
 
 install:

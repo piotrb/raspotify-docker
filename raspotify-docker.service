@@ -13,9 +13,6 @@ Environment="DEVICE_NAME=raspotify (%H)"
 Environment="BITRATE=160"
 ExecStart=/usr/bin/docker run \
   --net=host \
-  --user pi \
-  --group pi \
-  --rm \
   --name %n \
   --device /dev/snd \
   -e DEVICE_NAME \
