@@ -23,4 +23,4 @@ ENV BITRATE 160
 
 USER raspotify
 
-CMD /usr/bin/librespot --name ${DEVICE_NAME} --backend alsa --bitrate ${BITRATE} --disable-audio-cache --enable-volume-normalisation --linear-volume --initial-volume=100
+CMD /usr/bin/librespot --name "${DEVICE_NAME}" --backend alsa --bitrate ${BITRATE} --disable-audio-cache --enable-volume-normalisation --linear-volume --initial-volume=100
